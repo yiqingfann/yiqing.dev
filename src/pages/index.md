@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/BaseLayout.astro
+layout: ../layouts/PageLayout.astro
 ---
 
 你好，我叫 Yiqing Fan，欢迎来到我的个人网站！我平时喜欢阅读，思考，行动，交流。作为交流的一部分，我正在尝试写作，想在这里分享一些我平时的所思所想，以及项目的折腾过程。
