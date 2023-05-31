@@ -1,19 +1,19 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 const allPosts = await Astro.glob("./**/*.md");
 ---
 
 <PageLayout>
-  {
-    allPosts.map((post) => (
-      <div class="py-12">
+  <div class="py-12">
+    {
+      allPosts.map((post) => (
         <div class="py-1 flex gap-2">
           <a href={post.url} class="no-underline font-normal text-gray-700">
             {post.frontmatter.title}
           </a>
           <div class="italic text-gray-400">{post.frontmatter.createdAt}</div>
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </PageLayout>
