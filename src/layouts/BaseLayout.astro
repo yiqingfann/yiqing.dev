@@ -2,51 +2,54 @@
 const title = "yiqing • home";
 const description = "Welcome to yiqing's blog";
 const pageUrl = "https://www.yiqing.dev";
-const imageUrl =
+const image =
   "https://static.wikia.nocookie.net/yuru-camp/images/b/b1/4_-_Day_in_Life_of_Shima-rin.jpg/revision/latest?cb=20200901005505";
 ---
 
 <html lang="en">
   <head>
+    <!-- global metadata -->
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={pageUrl} />
-    <meta property="og:image" content={imageUrl} />
-
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:url" content={pageUrl} />
-    <meta property="twitter:image" content={imageUrl} />
-    <meta property="twitter:card" content="summary_large_image" /> -->
-
-    <!-- Primary Meta Tags -->
+    <!-- primary meta tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
 
-    <!-- Open Graph / Facebook -->
+    <!-- open graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={title} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image" content={image} />
 
-    <!-- Twitter -->
+    <!-- twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={imageUrl} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- link tags -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="preload"
+      href="/fonts/Switzer.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Hack.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
