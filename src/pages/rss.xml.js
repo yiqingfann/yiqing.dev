@@ -4,7 +4,7 @@ export async function get() {
   return rss({
     title: "Yiqing Fan",
     description: "Yiqing's Blog",
-    site: "https://www.yiqing.dev/",
+    site: "https://yiqing-dot-dev-git-add-rss-yiqingfann.vercel.app/",
     items: await pagesGlobToRssItems(import.meta.glob("./**/*.md")),
     customData: `<language>zh-cn</language>`,
   });
