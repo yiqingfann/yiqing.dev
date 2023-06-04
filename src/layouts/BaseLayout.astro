@@ -1,6 +1,9 @@
 ---
 const title = "yiqing • home";
 const description = "Welcome to yiqing's blog";
+const pageUrl = "https://www.yiqing.dev";
+const imageUrl =
+  "https://static.wikia.nocookie.net/yuru-camp/images/b/b1/4_-_Day_in_Life_of_Shima-rin.jpg/revision/latest?cb=20200901005505";
 ---
 
 <html lang="en">
@@ -16,11 +19,13 @@ const description = "Welcome to yiqing's blog";
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={imageUrl} />
 
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={pageUrl} />
+    <meta property="twitter:image" content={imageUrl} />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
