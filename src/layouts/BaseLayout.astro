@@ -14,8 +14,13 @@ const description = "Welcome to yiqing's blog";
     <meta name="title" content={title} />
     <meta name="description" content={description} />
 
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={Astro.url} />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
