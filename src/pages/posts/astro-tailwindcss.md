@@ -28,7 +28,7 @@ createdAt: "2023/06/03"
 
 所以完全没有纠结，上周中的晚上快速把 Astro 官方的 Build a blog 教程做了一遍熟悉一下，周末很快就把新博客做完了。总体感觉是很干净的为 content website 设计的框架，它 file-based routing 的好处是会把所有`pages/`下面的`.astro`和`.md`文件都生成页面，因此没必要像 Gatsby 里那样手动用 GraphQL 先把文件拿到，再用`<div dangerouslySetInnerHTML={{ __html: html }} />` 显示内容了。而 file-based routing 的坏处就是对着一堆叫`index` 的文件我每次都得花时间看一眼它文件夹的名字是什么。不能 cmd + p 快速跳转文件我会似（。
 
-<img src="/assets/astro-tailwindcss/3_file-based-routing.png" alt="3_file-based-routing.png" width="75%" style="margin:auto" />
+<img src="/assets/astro-tailwindcss/3_file-based-routing.png" alt="3_file-based-routing.png" width="100%" style="margin:auto" />
 
 ## 风格：太美丽啦 @tailwindcss/typography
 
@@ -47,8 +47,8 @@ createdAt: "2023/06/03"
 
 在这次折腾过程中一件有趣的事是，做 Astro 官方的 tutorial 的时候，发现有两个页面都有“计算所有 unique tag”的逻辑，很自然的想 extract 成一个 util function 用。但是发现`Astro`这个 object 只有`.astro`文件的 frontmatter 里面才能用，于是就把它作为 argument 传进这个 util function，但很奇怪的是并不能 work。
 
-Astro 算是比较新的框架，所以 Google 不到这个问题，问了 ChatGPT 也解决不了。这种情况以前我会觉得它是一个不可能解决的问题，绕开它好了。但因为最近逐渐意识到跟人交流的重要性，就加了 Astro 的 Discord Channel 把问题发了上去。没想到很快就有人回复了。Astro Core Team 的一个人说我用的`Astro.glob()`是唯一不 work 的，然后建议了一个 work around，我试了一下成功解决了这个问题。这也算是我第一次在公开的地方提问，感觉开源社区还是非常友好的，希望以后也能多做一些这样的交流。
+Astro 算是比较新的框架，所以 Google 不到这个问题，问了 ChatGPT 也解决不了。这种情况以前我会觉得它是一个不可能解决的问题，绕开它好了。但因为最近逐渐意识到跟人交流的重要性，就加了 Astro 的 Discord Channel 把问题发了上去，没想到很快就有人回复了。Astro Core Team 的一个人说我用的`Astro.glob()`是唯一不 work 的，然后建议了一个 work around，我试了一下成功解决了这个问题。这也算是我第一次在公开的地方提问，感觉开源社区还是非常友好的，希望以后也能多做一些这样的交流。
 
 <img src="/assets/astro-tailwindcss/5_astro-discord.png" alt="5_astro-discord.png" width="100%" style="margin:auto" />
 
-另一件有趣的事是，我的这个博客大体上就是把 Randy 用 Eleventy 写的博客用 Astro 重写了一遍，而就在我快写完这篇文章的时候，发现 Randy 把博客改版了，从 Eleventy 迁移到了 Astro！发现的时候还挺开心的，有一种虽然是陌生人，但是技术让我们有了共同点的感觉，不知道他会不会也写一篇 Astro 的折腾过程 hh。看了一下他的新版本做了我接下来想加的正文目录功能，又有东西可以玩了，yay！
+另一件有趣的事是，我的这个博客大体上就是把 Randy 用 Eleventy 写的博客用 Astro 重写了一遍，而就在我快写完这篇文章的时候，发现 Randy 把博客改版了，从 Eleventy 迁移到了 Astro！发现的时候还挺开心的，有一种虽然是陌生人，但是技术让我们有了共同点的感觉。不知道他会不会也写一篇 Astro 的折腾过程 hh。看了一下他的新版本做了我接下来想加的正文目录功能，又有新东西可以玩了，yay！
