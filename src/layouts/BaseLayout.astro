@@ -1,4 +1,6 @@
 ---
+const title = "yiqing • home";
+const description = "Welcome to yiqing's blog";
 ---
 
 <html lang="en">
@@ -8,10 +10,12 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <meta property="og:title" content="Yiqing Fan" />
-    <meta property="og:description" content="Welcome to Yiqing's Blog" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
 
-    <title>Yiqing Fan</title>
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
