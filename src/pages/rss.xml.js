@@ -5,7 +5,7 @@ export async function get() {
     title: "Yiqing Fan",
     description: "Yiqing's Blog",
     site: "https://yiqing-dot-dev-git-add-rss-yiqingfann.vercel.app/",
-    items: await pagesGlobToRssItems(import.meta.glob("./**/*.md")),
+    items: await pagesGlobToRssItems(import.meta.glob("./posts/*.md")),
     customData: `<language>zh-cn</language>`,
   });
 }
