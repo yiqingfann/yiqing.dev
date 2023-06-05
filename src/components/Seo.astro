@@ -1,0 +1,20 @@
+---
+const { title, description } = Astro.props;
+const imageUrl = "https://i.redd.it/g4tplr2ozqb61.jpg";
+const currUrl = Astro.url.href;
+---
+
+<head>
+  <title>{title}</title>
+  <meta property="description" content={description} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={imageUrl} />
+  <meta property="og:url" content={currUrl} />
+
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={imageUrl} />
+  <meta property="twitter:card" content="summary" />
+</head>
