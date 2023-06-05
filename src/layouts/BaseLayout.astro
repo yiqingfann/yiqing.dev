@@ -1,6 +1,7 @@
 ---
 const title = "yiqing • home";
 const description = "Welcome to yiqing's blog";
+const siteUrl = "https://yiqing.dev";
 const imageUrl = "https://og.nxl.sh/home?title=hello";
 ---
 
@@ -15,11 +16,11 @@ const imageUrl = "https://og.nxl.sh/home?title=hello";
     <meta name="title" content={title} />
     <meta name="description" content={description} />
 
+    <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:site" content={siteUrl} />
     <meta property="twitter:image" content={imageUrl} />
-    <meta property="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
