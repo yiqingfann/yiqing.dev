@@ -4,7 +4,7 @@ const allPosts = await Astro.glob("./**/*.md");
 ---
 
 <PageLayout>
-  <div class="py-12">
+  <div class="py-2">
     {
       allPosts.map((post) => {
         const { title, pubDate } = post.frontmatter;
