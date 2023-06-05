@@ -6,14 +6,17 @@ const allPosts = await Astro.glob("./**/*.md");
 <PageLayout>
   <div class="py-12">
     {
-      allPosts.map((post) => (
-        <div class="py-1 flex gap-2">
-          <a href={post.url} class="no-underline font-normal text-gray-700">
-            {post.frontmatter.title}
-          </a>
-          <div class="italic text-gray-400">{post.frontmatter.createdAt}</div>
-        </div>
-      ))
+      allPosts.map((post) => {
+        const { title, pubDate } = post.frontmatter;
+        return (
+          <div class="py-1 flex gap-2">
+            <a href={post.url} class="no-underline font-normal text-gray-700">
+              {title}
+            </a>
+            <div class="italic text-gray-400">{pubDate}</div>
+          </div>
+        );
+      })
     }
   </div>
 </PageLayout>
