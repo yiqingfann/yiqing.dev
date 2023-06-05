@@ -1,9 +1,15 @@
 ---
+import Seo from "../components/Seo.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 const allPosts = await Astro.glob("./**/*.md");
+
+const seoTitle = "yiqing • blog";
+const seoDescription = "Yiqing's blog posts";
 ---
 
 <PageLayout>
+  <Seo title={seoTitle} description={seoDescription} />
+
   <div class="py-12">
     {
       allPosts.map((post) => (
