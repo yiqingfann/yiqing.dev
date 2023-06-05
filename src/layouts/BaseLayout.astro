@@ -1,4 +1,5 @@
 ---
+const imageUrl = "https://i.redd.it/g4tplr2ozqb61.jpg";
 ---
 
 <html lang="en">
@@ -8,6 +9,19 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Yiqing Fan</title>
+
+    <meta property="twitter:image" content={imageUrl} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Twitter link preview title" />
+    <meta
+      property="twitter:description"
+      content="Twitter link preview description"
+    />
+    <meta property="description" content="Search engine description" />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:title" content="Link preview title" />
+    <meta property="og:description" content="Link preview description" />
+    <meta property="og:url" content="Canonical link preview URL" />
   </head>
   <body>
     <div class="prose px-8 py-12 mx-auto sm:px-0 sm:py-24">
